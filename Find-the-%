@@ -1,0 +1,12 @@
+n = int(input())
+    all_marks = {}
+    for i in range (n):
+        entry = input().split()
+        student_name, *student_marks = entry
+        student_marks = list(map(float, student_marks))
+        all_marks[student_name] = student_marks
+    query_name = input()
+    query_marks = all_marks[query_name]
+    avg = sum(query_marks)/len(query_marks)
+    print('{:.2f}'.format(avg))    
+        
